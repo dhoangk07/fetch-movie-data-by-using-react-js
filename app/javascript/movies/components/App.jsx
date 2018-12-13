@@ -1,17 +1,22 @@
-import React from 'react'
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route
-} from 'react-router-dom'
-import MoviesDisplay from './MoviesDisplay'
+} from 'react-router-dom';
+import MoviesGenres from './MoviesGenres';
+import MoviesLatest from './MoviesLatest';
+import MoviesNav from './MoviesNav';
+import MoviesFooter from './MoviesFooter';
 
 const App = (props) => (
   <Router >
     <div>
-      <Route
-        path='/'
-        render={(routeProps) => <MoviesDisplay {...props} {...routeProps} />}
-      />
+      <MoviesNav />
+
+      <Route exact path='/' component={MoviesLatest} />
+      <Route path='/genres' component={MoviesGenres} />
+      
+      <MoviesFooter />
     </div>
   </Router>
 )
