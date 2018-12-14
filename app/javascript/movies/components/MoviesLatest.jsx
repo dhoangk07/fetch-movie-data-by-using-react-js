@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Latest from './Latest';
 
-class MoviesLatest extends React.Component {
+export default class MoviesLatest extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -36,4 +36,4 @@ class MoviesLatest extends React.Component {
   }
 }
 
-export default MoviesLatest
+ MoviesLatest

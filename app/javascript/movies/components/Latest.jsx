@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Latest extends React.Component {
+export default class Latest extends React.Component {
   render () {
     return (
       <div className="col-8 offset-2">
@@ -21,4 +21,3 @@ class Latest extends React.Component {
   }
 }
 
-export default Latest

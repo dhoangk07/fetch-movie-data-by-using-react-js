@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Genres from './Genres';
 
-class MoviesGenres extends React.Component {
+export default class MoviesGenres extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -25,19 +25,17 @@ class MoviesGenres extends React.Component {
     this.fetchGenresMovie();
   }
 
-  componentWillReceiveProps () {
-    this.fetchGenresMovie();
-  }
-
   render () {
     return (
       <div>
-         { this.state.genres.map(function(movie){
-          return <div><Genres data={movie} /></div>
+      <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div className="btn-group mr-2" role="group" aria-label="First group">
+         { this.state.genres.map(function(genre){
+          return <Genres data={genre} />
          })}
+         </div>
+         </div>
       </div>
     )
   }
 }
-
-export default MoviesGenres
